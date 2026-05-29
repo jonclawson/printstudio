@@ -1,0 +1,682 @@
+{
+    "code": 200,
+    "result": {
+        "product_id": 679,
+        "available_placements": {
+            "front": "Front print",
+            "back": "Back print",
+            "sleeve_right": "Right sleeve",
+            "sleeve_left": "Left sleeve"
+        },
+        "printfiles": [
+            {
+                "printfile_id": 446,
+                "width": 2325,
+                "height": 2940,
+                "dpi": 150,
+                "fill_mode": "fit",
+                "can_rotate": false
+            },
+            {
+                "printfile_id": 447,
+                "width": 563,
+                "height": 563,
+                "dpi": 150,
+                "fill_mode": "fit",
+                "can_rotate": false
+            }
+        ],
+        "variant_printfiles": [
+            {
+                "variant_id": 17004,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17005,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17006,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17007,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17008,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17009,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17080,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17025,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17026,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17027,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17028,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17029,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17030,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17083,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17011,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17012,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17013,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17014,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17015,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17016,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17081,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17039,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17040,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17041,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17042,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17043,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17044,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17085,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17046,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17047,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17048,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17049,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17050,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17051,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17086,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17074,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17075,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17076,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17077,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17078,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17079,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17090,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17018,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17019,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17020,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17021,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17022,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17023,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17082,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17060,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17061,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17062,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17063,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17064,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17065,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17088,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17067,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17068,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17069,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17070,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17071,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17072,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17089,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17053,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17054,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17055,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17056,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17057,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17058,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            },
+            {
+                "variant_id": 17087,
+                "placements": {
+                    "front": 446,
+                    "back": 446,
+                    "sleeve_right": 447,
+                    "sleeve_left": 447
+                }
+            }
+        ],
+        "option_groups": [
+            "Flat",
+            "Ghost",
+            "Men's",
+            "Men's Lifestyle",
+            "Product details",
+            "Women's",
+            "Women's Lifestyle"
+        ],
+        "options": [
+            "Back",
+            "Front",
+            "Left",
+            "Left Front",
+            "Left sleeve",
+            "Product details",
+            "Right",
+            "Right sleeve"
+        ]
+    },
+    "extra": []
+}

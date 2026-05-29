@@ -1,0 +1,187 @@
+{
+    "data": {
+        "id": 679,
+        "type": "DTFILM",
+        "main_category_id": 24,
+        "name": "Unisex Performance Crew Neck T-Shirt | A4 N3142",
+        "brand": "A4",
+        "model": "N3142",
+        "image": "https://files.cdn.printful.com/upload/product-catalog-img/e2/e239b78e54f77c63f3ec3bcda3be8e62_l",
+        "variant_count": 70,
+        "is_discontinued": false,
+        "description": "Stay cool, dry, and confident even during the most intense activities in this unisex performance crew neck t-shirt. Made from premium, moisture-wicking fabric with odor resistance, stain release, and UV protection, this shirt’s perfect for going to the gym, playing sports, hiking, or any other activity. \n\n• 100% premium polyester \n• Fabric weight: 4 oz/yd² (68 g/m²)\n• Soft, moisture-wicking fabric\n• Fade and snag resistant \n• Relaxed fit\n• UPF44+ protection\n• Reinforced shoulder seams\n• Blank product sourced from Haiti and Mexico\n\nImportant: This product is available only in the US, except for US territories such as Puerto Rico, Guam, the US Virgin Islands, American Samoa, and Northern Mariana Islands.\n\nDisclaimers:\n• Please note that the prints on the t-shirt may have variations in texture and appearance. This is due to a natural byproduct of the printing process called glycol, a nearly-clear glossy substance that may give the print a shinier appearance where present. Glycol is water-soluble/miscible, so washing the garment will easily remove it.\n• Due to the heat press used in the printing process, there may be some shading around the print area on darker-colored t-shirts. We recommend washing the garment to help mitigate any temporary color changes caused by the heat press.",
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL",
+            "3XL",
+            "4XL"
+        ],
+        "colors": [
+            {
+                "name": "Black",
+                "value": "#191919"
+            },
+            {
+                "name": "Forest Green",
+                "value": "#00572f"
+            },
+            {
+                "name": "Graphite",
+                "value": "#818181"
+            },
+            {
+                "name": "Navy",
+                "value": "#1f3045"
+            },
+            {
+                "name": "Purple",
+                "value": "#58367b"
+            },
+            {
+                "name": "Royal",
+                "value": "#1c5baa"
+            },
+            {
+                "name": "Safety Orange",
+                "value": "#ff4300"
+            },
+            {
+                "name": "Safety Yellow",
+                "value": "#e6fe1a"
+            },
+            {
+                "name": "Silver",
+                "value": "#e3e3e3"
+            },
+            {
+                "name": "White",
+                "value": "#ffffff"
+            }
+        ],
+        "techniques": [
+            {
+                "key": "dtfilm",
+                "display_name": "DTF printing",
+                "is_default": true
+            }
+        ],
+        "placements": [
+            {
+                "placement": "front",
+                "technique": "dtfilm",
+                "layers": [
+                    {
+                        "type": "file",
+                        "layer_options": []
+                    }
+                ],
+                "placement_options": [],
+                "conflicting_placements": [
+                    "front_large",
+                    "front_dtf",
+                    "front_dtfabric",
+                    "chest_left_dtf",
+                    "front_large_dtf"
+                ]
+            },
+            {
+                "placement": "back",
+                "technique": "dtfilm",
+                "layers": [
+                    {
+                        "type": "file",
+                        "layer_options": []
+                    }
+                ],
+                "placement_options": [],
+                "conflicting_placements": [
+                    "label_outside",
+                    "back_dtf",
+                    "back_large",
+                    "back_large_dtf",
+                    "back_dtfabric"
+                ]
+            },
+            {
+                "placement": "sleeve_right",
+                "technique": "dtfilm",
+                "layers": [
+                    {
+                        "type": "file",
+                        "layer_options": []
+                    }
+                ],
+                "placement_options": [],
+                "conflicting_placements": [
+                    "long_sleeve_right_dtf",
+                    "short_sleeve_right_dtf",
+                    "embroidery_wrist_right",
+                    "embroidery_wrist_left",
+                    "embroidery_sleeve_left_top",
+                    "embroidery_sleeve_right_top",
+                    "sleeve_right_dtfabric"
+                ]
+            },
+            {
+                "placement": "sleeve_left",
+                "technique": "dtfilm",
+                "layers": [
+                    {
+                        "type": "file",
+                        "layer_options": []
+                    }
+                ],
+                "placement_options": [],
+                "conflicting_placements": [
+                    "long_sleeve_left_dtf",
+                    "short_sleeve_left_dtf",
+                    "embroidery_wrist_right",
+                    "embroidery_wrist_left",
+                    "embroidery_sleeve_left_top",
+                    "embroidery_sleeve_right_top"
+                ]
+            },
+            {
+                "placement": "mockup",
+                "technique": "dtfilm",
+                "layers": [
+                    {
+                        "type": "file",
+                        "layer_options": []
+                    }
+                ],
+                "placement_options": [],
+                "conflicting_placements": []
+            }
+        ],
+        "product_options": [],
+        "_links": {
+            "self": {
+                "href": "https://api.printful.com/v2/catalog-products/679"
+            },
+            "variants": {
+                "href": "https://api.printful.com/v2/catalog-products/679/catalog-variants"
+            },
+            "categories": {
+                "href": "https://api.printful.com/v2/catalog-products/679/catalog-categories"
+            },
+            "product_prices": {
+                "href": "https://api.printful.com/v2/catalog-products/679/prices"
+            },
+            "product_sizes": {
+                "href": "https://api.printful.com/v2/catalog-products/679/sizes"
+            },
+            "product_images": {
+                "href": "https://api.printful.com/v2/catalog-products/679/images"
+            },
+            "product_availability": {
+                "href": "https://api.printful.com/v2/catalog-products/679/availability"
+            }
+        }
+    },
+    "extra": []
+}

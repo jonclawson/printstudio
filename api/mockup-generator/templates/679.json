@@ -1,0 +1,2127 @@
+{
+    "code": 200,
+    "result": {
+        "version": 100,
+        "variant_mapping": [
+            {
+                "variant_id": 17004,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17005,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17006,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17007,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17008,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17009,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17080,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192513
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192524
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195624
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195613
+                    }
+                ]
+            },
+            {
+                "variant_id": 17025,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17026,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17027,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17028,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17029,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17030,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17083,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192516
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192527
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195627
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195616
+                    }
+                ]
+            },
+            {
+                "variant_id": 17011,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17012,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17013,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17014,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17015,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17016,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17081,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192514
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192525
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195625
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195614
+                    }
+                ]
+            },
+            {
+                "variant_id": 17039,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17040,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17041,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17042,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17043,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17044,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17085,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192518
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192529
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195629
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195618
+                    }
+                ]
+            },
+            {
+                "variant_id": 17046,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17047,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17048,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17049,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17050,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17051,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17086,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192519
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192530
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195630
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195619
+                    }
+                ]
+            },
+            {
+                "variant_id": 17074,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17075,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17076,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17077,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17078,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17079,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17090,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192520
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192531
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195631
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195620
+                    }
+                ]
+            },
+            {
+                "variant_id": 17018,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17019,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17020,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17021,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17022,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17023,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17082,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192515
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192526
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195626
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195615
+                    }
+                ]
+            },
+            {
+                "variant_id": 17060,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17061,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17062,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17063,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17064,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17065,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17088,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192522
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192533
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195633
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195622
+                    }
+                ]
+            },
+            {
+                "variant_id": 17067,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17068,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17069,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17070,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17071,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17072,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17089,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192521
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192532
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195632
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195621
+                    }
+                ]
+            },
+            {
+                "variant_id": 17053,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17054,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17055,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17056,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17057,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17058,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            },
+            {
+                "variant_id": 17087,
+                "templates": [
+                    {
+                        "placement": "front",
+                        "template_id": 192523
+                    },
+                    {
+                        "placement": "back",
+                        "template_id": 192534
+                    },
+                    {
+                        "placement": "sleeve_right",
+                        "template_id": 195634
+                    },
+                    {
+                        "placement": "sleeve_left",
+                        "template_id": 195623
+                    }
+                ]
+            }
+        ],
+        "templates": [
+            {
+                "template_id": 192513,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#191919",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192524,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#191919",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195624,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#191919",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195613,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#191919",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192516,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1f3045",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192527,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1f3045",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195627,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1f3045",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195616,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1f3045",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192514,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#00572f",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192525,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#00572f",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195625,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#00572f",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195614,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#00572f",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192518,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#58367b",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192529,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#58367b",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195629,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#58367b",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195618,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#58367b",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192519,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1c5baa",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192530,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1c5baa",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195630,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1c5baa",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195619,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#1c5baa",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192520,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ff4300",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192531,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ff4300",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195631,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ff4300",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195620,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ff4300",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192515,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#818181",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192526,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#818181",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195626,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#818181",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195615,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#818181",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192522,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e3e3e3",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192533,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e3e3e3",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195633,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e3e3e3",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195622,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e3e3e3",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192521,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e6fe1a",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192532,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e6fe1a",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195632,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e6fe1a",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195621,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#e6fe1a",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192523,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/front/06_A4_N3142_ghost_mockup_front_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ffffff",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1429.0,
+                "print_area_height": 1809.0,
+                "print_area_top": 464.0,
+                "print_area_left": 801.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 192534,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/back/06_A4_N3142_ghost_mockup_back_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ffffff",
+                "printfile_id": 446,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 1314.0,
+                "print_area_height": 1661.0,
+                "print_area_top": 370.0,
+                "print_area_left": 843.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195634,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/right/zoomed/06_A4_N3142_ghost_mockup_right_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ffffff",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1073.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            },
+            {
+                "template_id": 195623,
+                "image_url": "https://files.cdn.printful.com/m/Performance_tshirt_A4_N3142/medium/ghost/left/zoomed/06_A4_N3142_ghost_mockup_left_base_whitebg.png?v=1686834709",
+                "background_url": null,
+                "background_color": "#ffffff",
+                "printfile_id": 447,
+                "template_width": 3000,
+                "template_height": 3000.0,
+                "print_area_width": 572.0,
+                "print_area_height": 572.0,
+                "print_area_top": 1609.0,
+                "print_area_left": 1355.0,
+                "is_template_on_front": true,
+                "orientation": "any"
+            }
+        ],
+        "min_dpi": 75,
+        "conflicting_placements": [
+            {
+                "placement": "front",
+                "conflicts": [
+                    "front_large",
+                    "front_dtf",
+                    "front_dtfabric",
+                    "chest_left_dtf",
+                    "front_large_dtf"
+                ]
+            },
+            {
+                "placement": "back",
+                "conflicts": [
+                    "label_outside",
+                    "back_dtf",
+                    "back_large",
+                    "back_large_dtf",
+                    "back_dtfabric"
+                ]
+            },
+            {
+                "placement": "sleeve_right",
+                "conflicts": [
+                    "long_sleeve_right_dtf",
+                    "short_sleeve_right_dtf",
+                    "embroidery_wrist_right",
+                    "embroidery_wrist_left",
+                    "embroidery_sleeve_left_top",
+                    "embroidery_sleeve_right_top",
+                    "sleeve_right_dtfabric"
+                ]
+            },
+            {
+                "placement": "sleeve_left",
+                "conflicts": [
+                    "long_sleeve_left_dtf",
+                    "short_sleeve_left_dtf",
+                    "embroidery_wrist_right",
+                    "embroidery_wrist_left",
+                    "embroidery_sleeve_left_top",
+                    "embroidery_sleeve_right_top"
+                ]
+            }
+        ]
+    },
+    "extra": []
+}

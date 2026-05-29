@@ -1,0 +1,59 @@
+{
+    "data": {
+        "id": 17004,
+        "catalog_product_id": 679,
+        "name": "A4 N3142 (Black / S)",
+        "size": "S",
+        "color": "Black",
+        "color_code": "#191919",
+        "color_code2": null,
+        "image": "https://files.cdn.printful.com/products/679/17004_1686038136.jpg",
+        "_links": {
+            "self": {
+                "href": "https://api.printful.com/v2/catalog-variants/17004"
+            },
+            "product_details": {
+                "href": "https://api.printful.com/v2/catalog-products/679"
+            },
+            "product_variants": {
+                "href": "https://api.printful.com/v2/catalog-products/679/catalog-variants"
+            },
+            "variant_prices": {
+                "href": "https://api.printful.com/v2/catalog-variants/17004/prices"
+            },
+            "variant_images": {
+                "href": "https://api.printful.com/v2/catalog-variants/17004/images"
+            },
+            "variant_availability": {
+                "href": "https://api.printful.com/v2/catalog-variants/17004/availability"
+            }
+        },
+        "placement_dimensions": [
+            {
+                "placement": "front",
+                "height": 19.6,
+                "width": 15.5,
+                "orientation": "any"
+            },
+            {
+                "placement": "back",
+                "height": 19.6,
+                "width": 15.5,
+                "orientation": "any"
+            },
+            {
+                "placement": "sleeve_left",
+                "height": 3.75,
+                "width": 3.75,
+                "orientation": "any"
+            },
+            {
+                "placement": "sleeve_right",
+                "height": 3.75,
+                "width": 3.75,
+                "orientation": "any"
+            }
+        ]
+    },
+    "extra": []
+}
