@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seamless Fabric.js Print Studio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevents scrollbars */
+      background-color: #f0f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Absolute wrapper to maximize layout window area */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Controls Panel */
+    .controls {
+      background: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 10;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+    }
+
+    select, input[type="file"] {
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      background: #fff;
+    }
+
+    .export-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-end;
+      margin-bottom: 2px;
+      transition: background-color 0.2s ease;
+    }
+
+    .export-btn:hover {
+      background-color: #218838;
+    }
+
+    /* Staging section wraps the canvas and takes remaining screen real-estate */
+    .workspace-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* Checkered transparency background pattern style for canvas staging */
+    .canvas-container {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      /* background-image: linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <div class="controls">
+      <div class="control-group">
+        <label for="bgLoader">1. Template Background</label>
+        <input type="file" id="bgLoader" accept="image/*">
+      </div>
+      
+      <div class="control-group">
+        <label for="artworkLoader">2. Interactive Artwork</label>
+        <input type="file" id="artworkLoader" accept="image/*">
+      </div>
+
+      <div class="control-group">
+        <label for="scaleMode">BG Scale Mode</label>
+        <select id="scaleMode">
+          <option value="contain">Contain (Fit)</option>
+          <option value="cover">Cover (Fill)</option>
+        </select>
+      </div>
+
+      <button class="export-btn" id="exportBtn">Export Full Template Snapshot</button>
+    </div>
+
+    <div class="workspace-stage" id="stage">
+      <canvas id="productCanvas"></canvas>
+    </div>
+  </div>
+
+  <script>
+    // 1. Core API Metrics Map Configurations
+    const config = {
+      template_width: 3000.0,
+      template_height: 3000.0,
+      print_area_width: 1429.0,
+      print_area_height: 1809.0,
+      print_area_top: 464.0,
+      print_area_left: 801.0
+    };
+
+    let bgImageInstance = null;
+    const stageElement = document.getElementById('stage');
+
+    // 2. Initialize Main Interactive Viewport Canvas Engine
+    const canvas = new fabric.Canvas('productCanvas', {
+      backgroundColor: 'rgba(0,0,0,0)',
+      controlsAboveOverlay: true
+    });
+
+    // 3. Generate Target Print Clipping Bound Geometry Mask Block
+    const printAreaClipPath = new fabric.Rect({
+      left: config.print_area_left,
+      top: config.print_area_top,
+      width: config.print_area_width,
+      height: config.print_area_height,
+      absolutePositioned: true
+    });
+
+    // 4. Draw UI guidelines safely inside the viewport rendering loop
+    canvas.on('after:render', function(options) {
+      const ctx = options.ctx;
+      ctx.save();
+      ctx.strokeStyle = '#dc3545';
+      ctx.lineWidth = 8;
+      ctx.setLineDash([20, 15]);
+      ctx.strokeRect(
+        config.print_area_left,
+        config.print_area_top,
+        config.print_area_width,
+        config.print_area_height
+      );
+
+      ctx.fillStyle = '#dc3545';
+      ctx.font = 'bold 44px sans-serif';
+      ctx.setLineDash([]);
+      ctx.fillText('PRINT AREA BOUNDARY', config.print_area_left + 30, config.print_area_top + 65);
+      ctx.restore();
+    });
+
+    // 5. WINDOW AUTO-SCALE RESPONSIVE ENGINE MAPPING HANDLER
+    function resizeAndScaleStudio() {
+      const padding = 30; 
+      const availableWidth = stageElement.clientWidth - padding;
+      const availableHeight = stageElement.clientHeight - padding;
+
+      const scaleMultiplier = Math.min(
+        availableWidth / config.template_width,
+        availableHeight / config.template_height
+      );
+
+      canvas.setDimensions({
+        width: config.template_width * scaleMultiplier,
+        height: config.template_height * scaleMultiplier
+      });
+
+      canvas.setZoom(scaleMultiplier);
+    }
+
+    window.addEventListener('resize', resizeAndScaleStudio);
+
+    // 6. Handle Template Background Image processing routines
+    function updateBackground() {
+      if (!bgImageInstance) return;
+
+      const mode = document.getElementById('scaleMode').value;
+      const ratioW = config.template_width / bgImageInstance.width;
+      const ratioH = config.template_height / bgImageInstance.height;
+      const scale = (mode === 'contain') ? Math.min(ratioW, ratioH) : Math.max(ratioW, ratioH);
+
+      bgImageInstance.set({
+        scaleX: scale,
+        scaleY: scale,
+        left: config.template_width / 2,
+        top: config.template_height / 2,
+        originX: 'center',
+        originY: 'center',
+        selectable: false,
+        hoverCursor: 'default'
+      });
+
+      canvas.renderAll();
+    }
+
+    // Background Image Input Loader Hook
+    document.getElementById('bgLoader').addEventListener('change', function(e) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        fabric.Image.fromURL(event.target.result, function(img) {
+          if (bgImageInstance) canvas.remove(bgImageInstance);
+          bgImageInstance = img;
+          canvas.add(bgImageInstance);
+          bgImageInstance.sendToBack();
+          updateBackground();
+        });
+      };
+      if(e.target.files[0]) reader.readAsDataURL(e.target.files[0]);
+    });
+
+    // 7. Handle Interactive Foreground Artwork uploads
+    document.getElementById('artworkLoader').addEventListener('change', function(e) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        fabric.Image.fromURL(event.target.result, function(img) {
+          
+          const ratioW = (config.print_area_width * 0.8) / img.width;
+          const ratioH = (config.print_area_height * 0.8) / img.height;
+          const initialScale = Math.min(ratioW, ratioH, 1.0);
+
+          img.set({
+            left: config.print_area_left + (config.print_area_width / 2),
+            top: config.print_area_top + (config.print_area_height / 2),
+            originX: 'center',
+            originY: 'center',
+            scaleX: initialScale,
+            scaleY: initialScale,
+            cornerColor: '#007bff',
+            cornerSize: 36,
+            transparentCorners: false,
+            borderColor: '#007bff',
+            borderScaleFactor: 4,
+            clipPath: printAreaClipPath
+          });
+
+          canvas.add(img);
+          canvas.setActiveObject(img);
+          canvas.renderAll();
+        });
+      };
+      if(e.target.files[0]) reader.readAsDataURL(e.target.files[0]);
+    });
+
+    document.getElementById('scaleMode').addEventListener('change', updateBackground);
+
+    // 8. FIXED: Asynchronous Async-Await Offscreen Export Engine
+    document.getElementById('exportBtn').addEventListener('click', async function() {
+      canvas.discardActiveObject();
+      canvas.renderAll();
+
+      // 1. Create a detached HTML canvas tag in memory
+      const hiddenCanvasEl = document.createElement('canvas');
+      const offscreenCanvas = new fabric.Canvas(hiddenCanvasEl, {
+        width: config.template_width,
+        height: config.template_height,
+        backgroundColor: 'rgba(0,0,0,0)'
+      });
+
+      // 2. Filter out the background template image layer
+      const targetObjects = canvas.getObjects().filter(obj => obj !== bgImageInstance);
+
+      // 3. Map objects to a collection of clone Promises so everything waits for image buffers to finish loading
+      const clonePromises = targetObjects.map(obj => {
+        return new Promise((resolve) => {
+          obj.clone(function(clonedObj) {
+            clonedObj.clipPath = printAreaClipPath;
+            offscreenCanvas.add(clonedObj);
+            resolve();
+          });
+        });
+      });
+
+      // 4. Wait until all elements are absolutely cloned and added to the offscreen matrix
+      await Promise.all(clonePromises);
+
+      // 5. Force the offscreen canvas to paint its layout completely
+      offscreenCanvas.renderAll();
+
+      // 6. Extract high-resolution data string snapshot directly from offscreen memory
+      const dataURL = offscreenCanvas.toDataURL({
+        format: 'png',
+        left: 0,
+        top: 0,
+        width: config.template_width,
+        height: config.template_height,
+        multiplier: 1
+      });
+
+      // Clean up offscreen memory blocks instantly
+      offscreenCanvas.dispose();
+
+      // 7. Direct download sequence trigger
+      const downloadLink = document.createElement('a');
+      downloadLink.download = `template-snapshot-${Date.now()}.png`;
+      downloadLink.href = dataURL;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    });
+
+    // Initial default layout run
+    resizeAndScaleStudio();
+  </script>
+
+</body>
+</html>
