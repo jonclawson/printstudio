@@ -12,13 +12,16 @@ const config = {
   print_area_left: 801.0,
 } as const;
 
+// CRITICAL FIX: Ensure the clipping shape handles absolute top-left offsets correctly
 function createPrintAreaClipPath() {
   return new Rect({
     left: config.print_area_left,
     top: config.print_area_top,
     width: config.print_area_width,
     height: config.print_area_height,
-    absolutePositioned: true,
+    absolutePositioned: true, // Evaluates coordinates globally on the 3000x3000px layout canvas
+    originX: 'left',          // FORCED FIX: Locks origin tracking away from center-point mapping
+    originY: 'top',           // FORCED FIX: Aligns perfectly with the template bounding box constants
   });
 }
 
@@ -30,7 +33,6 @@ export default function DesignStudio() {
 
   const canvasRef = useRef<Canvas | null>(null);
   const bgImageInstanceRef = useRef<FabricImage | null>(null);
-  const printAreaClipPathRef = useRef<Rect | null>(null);
 
   const updateBackground = useCallback(() => {
     const canvas = canvasRef.current;
@@ -90,16 +92,19 @@ export default function DesignStudio() {
 
     canvasRef.current = canvas;
 
-    const printAreaClipPath = createPrintAreaClipPath();
-    printAreaClipPathRef.current = printAreaClipPath;
-
+    // FIX: Context transformation maps adjustment for handling guidelines under canvas scaling
     const afterRenderHandler = (e: { ctx?: CanvasRenderingContext2D }) => {
       const ctx = e.ctx;
       if (!ctx) return;
 
       ctx.save();
+      
+      // Neutralize viewport matrix compression so coordinates remain 1:1 with template metrics
+      const zoom = canvas.getZoom();
+      ctx.scale(zoom, zoom);
+
       ctx.strokeStyle = '#dc3545';
-      ctx.lineWidth = 8;
+      ctx.lineWidth = 8 / zoom; // Normalizes stroke width regardless of screen sizing adjustments
       ctx.setLineDash([20, 15]);
       ctx.strokeRect(
         config.print_area_left,
@@ -133,7 +138,6 @@ export default function DesignStudio() {
 
       canvasRef.current = null;
       bgImageInstanceRef.current = null;
-      printAreaClipPathRef.current = null;
     };
   }, [resizeAndScaleStudio]);
 
@@ -161,17 +165,13 @@ export default function DesignStudio() {
     }
 
     bgImageInstanceRef.current = img;
-
-    // Put background at the bottom z-order
     canvas.insertAt(0, img);
-
     updateBackground();
   };
 
   const handleArtworkUpload = async (file: File | null) => {
     const canvas = canvasRef.current;
-    const printAreaClipPath = printAreaClipPathRef.current;
-    if (!canvas || !printAreaClipPath || !file) return;
+    if (!canvas || !file) return;
 
     const dataUrl = await readFileAsDataUrl(file);
     const img = await FabricImage.fromURL(dataUrl);
@@ -192,7 +192,8 @@ export default function DesignStudio() {
       transparentCorners: false,
       borderColor: '#007bff',
       borderScaleFactor: 4,
-      clipPath: printAreaClipPath,
+      // FIX: Inject a separate, completely fresh bounding instance context here directly
+      clipPath: createPrintAreaClipPath(),
     });
 
     canvas.add(img);
@@ -203,10 +204,7 @@ export default function DesignStudio() {
   const handleExportClick = async () => {
     const canvas = canvasRef.current;
     const bgImageInstance = bgImageInstanceRef.current;
-    if (!canvas || !bgImageInstance) return;
-
-    // Create an export-time clipPath that isn't tied to the main canvas objects.
-    const exportClipPath = createPrintAreaClipPath();
+    if (!canvas) return;
 
     canvas.discardActiveObject();
     canvas.renderAll();
@@ -223,14 +221,15 @@ export default function DesignStudio() {
     await Promise.all(
       targetObjects.map(async (obj) => {
         const clonedObj = await obj.clone();
-        clonedObj.clipPath = exportClipPath;
+        // FIX: Inject fresh absolute top-left aligned bounding parameters into the export collection
+        clonedObj.clipPath = createPrintAreaClipPath();
         offscreenCanvas.add(clonedObj);
       }),
     );
 
     offscreenCanvas.renderAll();
 
-    const dataURL = offscreenCanvas.toDataURL({
+    const dataURL = offscreenCanvas.toToDataURL({
       format: 'png',
       left: 0,
       top: 0,
