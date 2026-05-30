@@ -229,7 +229,7 @@ export default function DesignStudio() {
 
     offscreenCanvas.renderAll();
 
-    const dataURL = offscreenCanvas.toToDataURL({
+    const dataURL = offscreenCanvas.toDataURL({
       format: 'png',
       left: 0,
       top: 0,
