@@ -34,6 +34,15 @@ export default function App() {
       print_area_left: first.print_area_left,
       image_url: first.image_url,
       background_color: first.background_color ?? null,
+      // onExportComplete: async (file: File) => {
+      //   // For demo purposes, we'll just log the file info.
+      //   // In a real app, you might upload this to a server or trigger a download.
+      //   console.log('Exported file:', {
+      //     name: file.name,
+      //     size: file.size,
+      //     type: file.type,
+      //   });
+      // }
     };
   }, []);
 
@@ -67,6 +76,15 @@ export default function App() {
               print_area_left: first.print_area_left,
               image_url: first.image_url,
               background_color: first.background_color ?? null,
+              onExportComplete: async (file: File) => {
+                // For demo purposes, we'll just log the file info.
+                // In a real app, you might upload this to a server or trigger a download.
+                console.log('Exported file:', {
+                  name: file.name,
+                  size: file.size,
+                  type: file.type,
+                });
+              }
             });
             return;
           }

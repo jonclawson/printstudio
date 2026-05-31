@@ -260,6 +260,32 @@ export default function DesignStudio({ config }: { config: TemplateConfig }) {
 
     offscreenCanvas.renderAll();
 
+    // if onExportComplete is provided. Convert the offscreen canvas to a binary Blob using the standard HTML canvas element
+    if (config.onExportComplete) {
+      const { onExportComplete } = config;
+      const canvasElement = offscreenCanvas.getElement();
+      
+      canvasElement.toBlob(async (blob) => {
+        if (!blob) {
+          console.error("Failed to generate printfile blob");
+          return;
+        }
+
+        // Convert the Blob into a structured File object ready for an API payload
+        const printFile = new File([blob], `printfile-${Date.now()}.png`, {
+          type: 'image/png',
+        });
+
+        // 4. Pass the file to the parent component callback
+        await onExportComplete(printFile);
+
+        // Clean up memory
+        offscreenCanvas.dispose();
+      }, 'image/png');
+        return; // early exit since we're handling export via callback
+     }
+    /// Export canvas to data URL and trigger download
+
     const dataURL = offscreenCanvas.toDataURL({
       format: 'png',
       left: 0,

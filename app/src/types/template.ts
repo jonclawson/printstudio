@@ -7,4 +7,5 @@ export type TemplateConfig = {
   print_area_left: number;
   image_url: string;
   background_color?: string | null;
+  onExportComplete?: (file: File) => void | Promise<void>;
 };
