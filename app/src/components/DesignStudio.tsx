@@ -260,50 +260,42 @@ export default function DesignStudio({ config }: { config: TemplateConfig }) {
 
     offscreenCanvas.renderAll();
 
-    // if onExportComplete is provided. Convert the offscreen canvas to a binary Blob using the standard HTML canvas element
-    if (config.onExportComplete) {
-      const { onExportComplete } = config;
-      const canvasElement = offscreenCanvas.getElement();
-      
-      canvasElement.toBlob(async (blob) => {
-        if (!blob) {
-          console.error("Failed to generate printfile blob");
-          return;
-        }
-
-        // Convert the Blob into a structured File object ready for an API payload
-        const printFile = new File([blob], `printfile-${Date.now()}.png`, {
-          type: 'image/png',
-        });
-
-        // 4. Pass the file to the parent component callback
-        await onExportComplete(printFile);
-
-        // Clean up memory
-        offscreenCanvas.dispose();
-      }, 'image/png');
-        return; // early exit since we're handling export via callback
-     }
-    /// Export canvas to data URL and trigger download
-
+    // Crop export to the print area bounds
     const dataURL = offscreenCanvas.toDataURL({
       format: 'png',
-      left: 0,
-      top: 0,
-      width: templateDims.width,
-      height: templateDims.height,
+      left: config.print_area_left,
+      top: config.print_area_top,
+      width: config.print_area_width,
+      height: config.print_area_height,
       multiplier: 1,
     });
 
     offscreenCanvas.dispose();
 
+    // If the parent provided a callback, pass the export as a File.
+    // (Prefer callback over auto-download.)
+    if (config.onExportComplete) {
+      const res = await fetch(dataURL);
+      const blob = await res.blob();
+      const file = new File([blob], `print-area-${Date.now()}.png`, {
+        type: 'image/png',
+      });
+      await config.onExportComplete(file);
+      return;
+    }
+
     const downloadLink = document.createElement('a');
-    downloadLink.download = `template-snapshot-${Date.now()}.png`;
+    downloadLink.download = `print-area-snapshot-${Date.now()}.png`;
     downloadLink.href = dataURL;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
-  }, [printAreaClipPath, templateDims.height, templateDims.width]);
+  }, [
+    printAreaClipPath,
+    templateDims.height,
+    templateDims.width,
+    config,
+  ]);
 
   return (
     <div className="app-container">
