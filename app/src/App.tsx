@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import DesignStudio from './components/DesignStudio';
+import DesignStudio from 'designstudio';
+// import DesignStudio from './components/DesignStudio';
 import type { TemplateConfig } from './types/template';
 
 import mockupTemplatesJson from '../../api/v2/catalog-products/679/mockup-templates.json';
