@@ -267,7 +267,7 @@ export default function DesignStudio({ config }: { config: TemplateConfig }) {
       top: config.print_area_top,
       width: config.print_area_width,
       height: config.print_area_height,
-      multiplier: 1,
+      multiplier: config.printfile_width / config.print_area_width,
     });
 
     offscreenCanvas.dispose();
