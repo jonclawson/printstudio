@@ -13,6 +13,7 @@ Set properties template area, print area, image url, background color, print fil
 
 ```
 import PrintStudio from 'printstudio';
+import 'printstudio/dist/printstudio.css';
 
 const config = {
   template_width: number,
