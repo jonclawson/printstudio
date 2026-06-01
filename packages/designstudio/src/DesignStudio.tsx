@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Canvas, FabricObject, Image as FabricImage, Rect } from 'fabric';
 import type { TemplateConfig } from './types/template';
-import './DesignStudio.css';
+import './designstudio.css';
 
 type FabricCanvasRef = React.MutableRefObject<Canvas | null>;
 
