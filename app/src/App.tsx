@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import 'designstudio/dist/designstudio.css';
-import DesignStudio from 'designstudio';
-// import DesignStudio from './components/DesignStudio';
+
+// test package mode
+// import 'designstudio/dist/designstudio.css';
+// import DesignStudio from 'designstudio';
+// import type { TemplateConfig } from 'designstudio';
+
+// Dev mode
+import DesignStudio from './components/DesignStudio';
 import type { TemplateConfig } from './types/template';
 
 import mockupTemplatesJson from '../../api/v2/catalog-products/679/mockup-templates.json';
