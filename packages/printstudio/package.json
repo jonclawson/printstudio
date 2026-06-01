@@ -1,6 +1,6 @@
 {
   "name": "printstudio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "description": "React + Fabric.js print studio component",
@@ -14,7 +14,7 @@
       "default": "./dist/index.js"
     },
     "./package.json": "./package.json",
-    "./dist/designstudio.css": "./dist/designstudio.css"
+    "./dist/printstudio.css": "./dist/printstudio.css"
   },
   "sideEffects": ["*.css"],
   "files": [

@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 
 // test package mode
-// import 'designstudio/dist/designstudio.css';
-// import DesignStudio from 'designstudio';
-// import type { TemplateConfig } from 'designstudio';
+// import 'printstudio/dist/printstudio.css';
+// import PrintStudio from 'printstudio';
+// import type { TemplateConfig } from 'printstudio';
 
 // Dev mode
-import DesignStudio from './components/DesignStudio';
+import PrintStudio from './components/PrintStudio';
 import type { TemplateConfig } from './types/template';
 
 import mockupTemplatesJson from '../../api/v2/catalog-products/679/mockup-templates.json';
@@ -168,5 +168,5 @@ export default function App() {
     );
   }
 
-  return <DesignStudio config={config} />;
+  return <PrintStudio config={config} />;
 }

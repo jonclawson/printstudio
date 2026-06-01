@@ -1,2 +1,2 @@
-export * from '../../../packages/designstudio/src/types/template';
+export * from '../../../packages/printstudio/src/types/template';
 

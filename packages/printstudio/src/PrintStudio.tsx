@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Canvas, FabricObject, Image as FabricImage, Rect } from 'fabric';
 import type { TemplateConfig } from './types/template';
-import './designstudio.css';
+import './printstudio.css';
 
 type FabricCanvasRef = React.MutableRefObject<Canvas | null>;
 
-export default function DesignStudio({ config }: { config: TemplateConfig }) {
+export default function PrintStudio({ config }: { config: TemplateConfig }) {
   const canvasElRef = useRef<HTMLCanvasElement | null>(null);
   const stageElRef = useRef<HTMLDivElement | null>(null);
 
