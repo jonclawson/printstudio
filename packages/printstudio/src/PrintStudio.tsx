@@ -293,7 +293,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     <div className="app-container">
       <div className="controls">
         <button className="export-btn" type="button" onClick={handleUploadArtworkClick}>
-          Upload Artwork
+          Upload
         </button>
 
         <input
@@ -305,7 +305,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
         />
 
         <button className="export-btn" type="button" onClick={() => void handleExportClick()}>
-          Export Full Template Snapshot
+          Save
         </button>
       </div>
 
