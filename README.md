@@ -31,6 +31,7 @@ const config = {
   printfile_dpi: number,
 
   onExportComplete?: (file: File) => void | Promise<void>,
+  onSaveThumb?: (file: File) => void | Promise<void>
 }
 
 

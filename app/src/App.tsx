@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 // test package mode
 // import 'printstudio/dist/printstudio.css';
@@ -53,6 +53,17 @@ function getPrintfileForTemplate(
 }
 
 export default function App() {
+  const downloadFileInBrowser = useCallback((file: File) => {
+    const url = URL.createObjectURL(file);
+    const downloadLink = document.createElement('a');
+    downloadLink.download = file.name;
+    downloadLink.href = url;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    URL.revokeObjectURL(url);
+  }, []);
+
   const fallbackConfig: TemplateConfig | null = useMemo(() => {
     const payload = mockupTemplatesJson as unknown as MockupTemplatesResponse;
     const first = payload.data?.[0];
@@ -75,6 +86,10 @@ export default function App() {
       printfile_width: printfile.width,
       printfile_height: printfile.height,
       printfile_dpi: printfile.dpi,
+
+      // onSaveThumb: async (file: File) => {
+      //   downloadFileInBrowser(file);
+      // },
 
       // onExportComplete: async (file: File) => {
       //   // demo behavior: log
@@ -146,6 +161,10 @@ export default function App() {
               size: file.size,
               type: file.type,
             });
+          },
+
+          onSaveThumb: async (file: File) => {
+            downloadFileInBrowser(file);
           },
         });
       } catch {

@@ -1,6 +1,6 @@
 {
   "name": "printstudio",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "type": "module",
   "description": "React + Fabric.js print studio component",

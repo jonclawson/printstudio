@@ -77,7 +77,7 @@ function u({ config: s }) {
 		if (!e) return;
 		let t = { cancelled: !1 };
 		return (async () => {
-			let n = await a.fromURL(s.image_url);
+			let n = await a.fromURL(s.image_url, { crossOrigin: "anonymous" });
 			if (t.cancelled) {
 				n.dispose();
 				return;
@@ -153,10 +153,31 @@ function u({ config: s }) {
 		if (n.dispose(), s.onExportComplete) {
 			let e = await (await fetch(o)).blob(), t = new File([e], `print-area-${Date.now()}.png`, { type: "image/png" });
 			await s.onExportComplete(t);
+		} else {
+			let e = document.createElement("a");
+			e.download = `print-area-snapshot-${Date.now()}.png`, e.href = o, document.body.appendChild(e), e.click(), document.body.removeChild(e);
+		}
+		let c = new i(document.createElement("canvas"), {
+			width: m.width,
+			height: m.height,
+			backgroundColor: "rgba(0,0,0,0)"
+		}), l = e.getObjects();
+		await Promise.all(l.map(async (e) => {
+			let t = await e.clone();
+			c.add(t);
+		})), c.renderAll();
+		let u = c.toDataURL({
+			format: "png",
+			multiplier: 1
+		});
+		c.dispose();
+		let p = await (await fetch(u)).blob(), g = new File([p], `thumb-${Date.now()}.png`, { type: "image/png" });
+		if (s.onSaveThumb) {
+			await s.onSaveThumb(g);
 			return;
 		}
-		let c = document.createElement("a");
-		c.download = `print-area-snapshot-${Date.now()}.png`, c.href = o, document.body.appendChild(c), c.click(), document.body.removeChild(c);
+		let _ = document.createElement("a");
+		_.download = `thumb-${Date.now()}.png`, _.href = u, document.body.appendChild(_), _.click(), document.body.removeChild(_);
 	}, [
 		s,
 		h,

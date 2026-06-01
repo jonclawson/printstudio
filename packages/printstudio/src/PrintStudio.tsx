@@ -143,7 +143,9 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     const cancelledRef = { cancelled: false };
 
     const loadBg = async () => {
-      const nextBg = await FabricImage.fromURL(config.image_url);
+      const nextBg = await FabricImage.fromURL(config.image_url, {
+        crossOrigin: 'anonymous',
+      });
 
       if (cancelledRef.cancelled) {
         nextBg.dispose();
@@ -237,6 +239,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     canvas.discardActiveObject();
     canvas.renderAll();
 
+    // 1) Existing behavior: export print-area snapshot (artwork only, no bg)
     const offscreenEl = document.createElement('canvas');
     const offscreenCanvas = new Canvas(offscreenEl, {
       width: templateDims.width,
@@ -278,15 +281,60 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
         type: 'image/png',
       });
       await config.onExportComplete(file);
+    } else {
+      const downloadLink = document.createElement('a');
+      downloadLink.download = `print-area-snapshot-${Date.now()}.png`;
+      downloadLink.href = dataURL;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+
+    // 2) New behavior: save thumb (background + artwork as seen, but NO red overlay)
+    // The red "PRINT AREA BOUNDARY" is drawn via an "after:render" handler on the *main* canvas,
+    // so the offscreen canvas will naturally not include it.
+    const thumbOffscreenEl = document.createElement('canvas');
+    const thumbOffscreenCanvas = new Canvas(thumbOffscreenEl, {
+      width: templateDims.width,
+      height: templateDims.height,
+      backgroundColor: 'rgba(0,0,0,0)',
+    });
+
+    const thumbObjects = canvas.getObjects() as FabricObject[];
+
+    await Promise.all(
+      thumbObjects.map(async (obj) => {
+        const clonedObj = await obj.clone();
+        thumbOffscreenCanvas.add(clonedObj);
+      }),
+    );
+
+    thumbOffscreenCanvas.renderAll();
+
+    const thumbDataURL = thumbOffscreenCanvas.toDataURL({
+      format: 'png',
+      multiplier: 1,
+    });
+
+    thumbOffscreenCanvas.dispose();
+
+    const thumbRes = await fetch(thumbDataURL);
+    const thumbBlob = await thumbRes.blob();
+    const thumbFile = new File([thumbBlob], `thumb-${Date.now()}.png`, {
+      type: 'image/png',
+    });
+
+    if (config.onSaveThumb) {
+      await config.onSaveThumb(thumbFile);
       return;
     }
 
-    const downloadLink = document.createElement('a');
-    downloadLink.download = `print-area-snapshot-${Date.now()}.png`;
-    downloadLink.href = dataURL;
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+    const thumbDownloadLink = document.createElement('a');
+    thumbDownloadLink.download = `thumb-${Date.now()}.png`;
+    thumbDownloadLink.href = thumbDataURL;
+    document.body.appendChild(thumbDownloadLink);
+    thumbDownloadLink.click();
+    document.body.removeChild(thumbDownloadLink);
   }, [config, printAreaClipPath, templateDims.height, templateDims.width]);
 
   return (

@@ -17,4 +17,10 @@ export type TemplateConfig = {
   printfile_dpi: number;
 
   onExportComplete?: (file: File) => void | Promise<void>;
+
+  /**
+   * Save a "thumb" image of the full canvas (background + placed artwork),
+   * as seen on the page (but without the red print-area overlay).
+   */
+  onSaveThumb?: (file: File) => void | Promise<void>;
 };
