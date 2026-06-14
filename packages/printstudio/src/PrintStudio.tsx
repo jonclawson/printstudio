@@ -144,7 +144,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     canvasRef.current = canvas;
 
     resizeAndScaleStudio();
-    drawPrintAreaGuidelines();
+    // drawPrintAreaGuidelines();
 
     const onResize = () => resizeAndScaleStudio();
     window.addEventListener('resize', onResize);

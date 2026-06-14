@@ -46,9 +46,11 @@ function u({ config: s }) {
 		}), e.setZoom(i), e.requestRenderAll();
 	}, [h.height, h.width]), v = e(() => {
 		let e = d.current;
-		e && (e.off("after:render"), e.on("after:render", (e) => {
-			let t = e.ctx;
-			t && (t.save(), t.strokeStyle = "#dc3545", t.lineWidth = 8, t.setLineDash([20, 15]), t.strokeRect(s.print_area_left, s.print_area_top, s.print_area_width, s.print_area_height), t.fillStyle = "#dc3545", t.font = "bold 44px sans-serif", t.setLineDash([]), t.fillText("PRINT AREA BOUNDARY", s.print_area_left + 30, s.print_area_top + 65), t.restore());
+		e && (e.off("after:render"), e.on("after:render", (t) => {
+			let n = t.ctx;
+			if (!n) return;
+			let r = e.viewportTransform, i = e.getRetinaScaling();
+			n.save(), n.setTransform(r[0] * i, r[1] * i, r[2] * i, r[3] * i, r[4] * i, r[5] * i), 1 / e.getZoom(), n.strokeStyle = "#dc3545", n.lineWidth = 8, n.setLineDash([20, 15]), n.strokeRect(s.print_area_left, s.print_area_top, s.print_area_width, s.print_area_height), n.fillStyle = "#dc3545", n.font = "bold 44px sans-serif", n.setLineDash([]), n.fillText("PRINT AREA BOUNDARY", s.print_area_left + 30, s.print_area_top + 65), n.restore();
 		}));
 	}, [
 		s.print_area_height,
@@ -67,7 +69,7 @@ function u({ config: s }) {
 			controlsAboveOverlay: !0,
 			preserveObjectStacking: !0
 		});
-		d.current = t, _(), v();
+		d.current = t, _();
 		let n = () => _();
 		return window.addEventListener("resize", n), () => {
 			window.removeEventListener("resize", n), t.off("after:render"), t.dispose(), d.current = null, f.current = null;
