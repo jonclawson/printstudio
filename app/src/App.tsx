@@ -87,18 +87,23 @@ export default function App() {
       printfile_height: printfile.height,
       printfile_dpi: printfile.dpi,
 
-      // onSaveThumb: async (file: File) => {
-      //   downloadFileInBrowser(file);
-      // },
+      onSaveThumb: async (file: File) => {
+        // downloadFileInBrowser(file);
+        console.log('Exported thumb:', {
+          name: file.name,
+          size: file.size,
+          type: file.type,
+        });
+      },
 
-      // onExportComplete: async (file: File) => {
-      //   // demo behavior: log
-      //   console.log('Exported file:', {
-      //     name: file.name,
-      //     size: file.size,
-      //     type: file.type,
-      //   });
-      // },
+      onExportComplete: async (file: File) => {
+        // demo behavior: log
+        console.log('Exported file:', {
+          name: file.name,
+          size: file.size,
+          type: file.type,
+        });
+      },
     };
   }, []);
 
