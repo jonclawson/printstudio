@@ -223,13 +223,14 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
         originY: 'center',
         selectable: false,
         hoverCursor: 'default',
+        evented: false,
       });
 
       bgImageRef.current = nextBg;
 
       // Check if the background color rectangle is currently active on the canvas
       const hasBgColor = bgColorRectRef.current && canvas.contains(bgColorRectRef.current);
-      const targetIndex = hasBgColor ? 1 : 0;
+      const targetIndex = hasBgColor ? 2 : 0;
 
       // CORRECT SIGNATURE: index first, then object
       canvas.insertAt(targetIndex, nextBg);
@@ -272,7 +273,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
         clipPath: areaClip,
       });
 
-      canvas.add(img);
+      canvas.insertAt(1, img);
       canvas.setActiveObject(img);
       canvas.requestRenderAll();
     },
