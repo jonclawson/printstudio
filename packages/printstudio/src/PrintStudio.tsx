@@ -72,7 +72,29 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
       const ctx = options.ctx;
       if (!ctx) return;
 
+      // 1. Get Fabric's internal viewport transform matrix [scaleX, skewY, skewX, scaleY, translateX, translateY]
+      const vpt = canvas.viewportTransform;
+      
+      // 2. Get the device pixel ratio backing the retina/HDPI canvas layout
+      const retina = canvas.getRetinaScaling();
+
       ctx.save();
+
+      // 3. Set the absolute transform mapping to match Fabric's exact positioning space
+      ctx.setTransform(
+        vpt[0] * retina, 
+        vpt[1] * retina, 
+        vpt[2] * retina, 
+        vpt[3] * retina, 
+        vpt[4] * retina, 
+        vpt[5] * retina
+      );
+      
+      // 4. Calculate an inverse scale value so your lines and text remain beautifully sharp 
+      // regardless of how large or small the browser scaling changes
+      const currentZoom = canvas.getZoom();
+      const thicknessScale = 1 / currentZoom;
+
       ctx.strokeStyle = '#dc3545';
       ctx.lineWidth = 8;
       ctx.setLineDash([20, 15]);
