@@ -20,10 +20,10 @@ var s = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t
 	t.exports = c();
 })))();
 function u({ config: s }) {
-	let c = r(null), u = r(null), d = r(null), f = r(null), p = r(null), m = n(() => ({
+	let c = r(null), u = r(null), d = r(null), f = r(null), p = r(null), m = r(null), h = n(() => ({
 		width: s.template_width,
 		height: s.template_height
-	}), [s.template_width, s.template_height]), h = e(() => new o({
+	}), [s.template_width, s.template_height]), g = e(() => new o({
 		left: s.print_area_left,
 		top: s.print_area_top,
 		width: s.print_area_width,
@@ -36,15 +36,15 @@ function u({ config: s }) {
 		s.print_area_top,
 		s.print_area_width,
 		s.print_area_height
-	]), g = e(() => {
+	]), _ = e(() => {
 		let e = d.current, t = u.current;
 		if (!e || !t) return;
-		let n = t.clientWidth - 30, r = t.clientHeight - 30, i = Math.min(n / m.width, r / m.height);
+		let n = t.clientWidth - 30, r = t.clientHeight - 30, i = Math.min(n / h.width, r / h.height);
 		e.setDimensions({
-			width: m.width * i,
-			height: m.height * i
-		}), e.setZoom(i), e.renderAll();
-	}, [m.height, m.width]), _ = e(() => {
+			width: h.width * i,
+			height: h.height * i
+		}), e.setZoom(i), e.requestRenderAll();
+	}, [h.height, h.width]), v = e(() => {
 		let e = d.current;
 		e && (e.off("after:render"), e.on("after:render", (e) => {
 			let t = e.ctx;
@@ -55,7 +55,7 @@ function u({ config: s }) {
 		s.print_area_left,
 		s.print_area_top,
 		s.print_area_width
-	]), v = e((e) => new Promise((t, n) => {
+	]), y = e((e) => new Promise((t, n) => {
 		let r = new FileReader();
 		r.onload = () => t(String(r.result)), r.onerror = () => n(/* @__PURE__ */ Error("Failed to read file")), r.readAsDataURL(e);
 	}), []);
@@ -67,45 +67,76 @@ function u({ config: s }) {
 			controlsAboveOverlay: !0,
 			preserveObjectStacking: !0
 		});
-		d.current = t, g(), _();
-		let n = () => g();
+		d.current = t, _(), v();
+		let n = () => _();
 		return window.addEventListener("resize", n), () => {
 			window.removeEventListener("resize", n), t.off("after:render"), t.dispose(), d.current = null, f.current = null;
 		};
-	}, [_, g]), t(() => {
+	}, [v, _]), t(() => {
+		let e = d.current;
+		if (!e) return;
+		let t = s.background_color;
+		if (t) {
+			if (p.current && e.contains(p.current)) {
+				p.current.set({ fill: t }), e.requestRenderAll();
+				return;
+			}
+			let n = new o({
+				left: 0,
+				top: 0,
+				width: h.width,
+				height: h.height,
+				fill: t,
+				selectable: !1,
+				evented: !1,
+				excludeFromExport: !0,
+				absolutePositioned: !0,
+				originX: "left",
+				originY: "top"
+			});
+			p.current = n, e.insertAt(0, n), e.requestRenderAll();
+		} else p.current && (e.remove(p.current), p.current.dispose(), p.current = null, e.requestRenderAll());
+	}, [
+		s.background_color,
+		h.height,
+		h.width
+	]), t(() => {
 		let e = d.current;
 		if (!e) return;
 		let t = { cancelled: !1 };
 		return (async () => {
-			let n = await a.fromURL(s.image_url, { crossOrigin: "anonymous" });
+			let n = await (await fetch(s.image_url)).blob(), r = URL.createObjectURL(n), i = await a.fromURL(r);
 			if (t.cancelled) {
-				n.dispose();
+				i.dispose();
 				return;
 			}
 			f.current && (e.remove(f.current), f.current.dispose());
-			let r = m.width / (n.width ?? 1), i = m.height / (n.height ?? 1), o = Math.min(r, i);
-			n.set({
-				scaleX: o,
-				scaleY: o,
-				left: m.width / 2,
-				top: m.height / 2,
+			let o = h.width / (i.width ?? 1), c = h.height / (i.height ?? 1), l = Math.min(o, c);
+			i.set({
+				scaleX: l,
+				scaleY: l,
+				left: h.width / 2,
+				top: h.height / 2,
 				originX: "center",
 				originY: "center",
 				selectable: !1,
-				hoverCursor: "default"
-			}), f.current = n, e.insertAt(0, n), e.renderAll();
+				hoverCursor: "default",
+				evented: !1
+			}), f.current = i;
+			let u = p.current && e.contains(p.current) ? 2 : 0;
+			e.insertAt(u, i), e.requestRenderAll();
 		})(), () => {
 			t.cancelled = !0;
 		};
 	}, [
 		s.image_url,
-		m.height,
-		m.width
+		h.height,
+		h.width
 	]);
-	let y = e(async (e) => {
+	let b = e(async (e) => {
 		let t = d.current;
 		if (!t || !e) return;
-		let n = h(), r = await v(e), i = await a.fromURL(r), o = s.print_area_width * .8 / (i.width ?? 1), c = s.print_area_height * .8 / (i.height ?? 1), l = Math.min(o, c, 1);
+		let n = g(), r = await y(e), i = await a.fromURL(r), o = s.print_area_width * .8 / (i.width ?? 1), c = s.print_area_height * .8 / (i.height ?? 1), l = Math.min(o, c, 1);
 		i.set({
 			left: s.print_area_left + s.print_area_width / 2,
 			top: s.print_area_top + s.print_area_height / 2,
@@ -119,29 +150,29 @@ function u({ config: s }) {
 			borderColor: "#007bff",
 			borderScaleFactor: 4,
 			clipPath: n
-		}), t.add(i), t.setActiveObject(i), t.renderAll();
+		}), t.insertAt(1, i), t.setActiveObject(i), t.requestRenderAll();
 	}, [
 		s.print_area_height,
 		s.print_area_left,
 		s.print_area_top,
 		s.print_area_width,
-		h,
-		v
-	]), b = e(() => {
-		p.current?.click();
-	}, []), x = e(async () => {
+		g,
+		y
+	]), x = e(() => {
+		m.current?.click();
+	}, []), S = e(async () => {
 		let e = d.current, t = f.current;
 		if (!e || !t) return;
-		e.discardActiveObject(), e.renderAll();
+		e.discardActiveObject(), e.requestRenderAll();
 		let n = new i(document.createElement("canvas"), {
-			width: m.width,
-			height: m.height,
+			width: h.width,
+			height: h.height,
 			backgroundColor: "rgba(0,0,0,0)"
-		}), r = h(), a = e.getObjects().filter((e) => e !== t);
+		}), r = g(), a = e.getObjects().filter((e) => e !== t && e !== p.current);
 		await Promise.all(a.map(async (e) => {
 			let t = await e.clone();
 			t.clipPath = r, n.add(t);
-		})), n.renderAll();
+		})), n.requestRenderAll();
 		let o = n.toDataURL({
 			format: "png",
 			left: s.print_area_left,
@@ -158,31 +189,31 @@ function u({ config: s }) {
 			e.download = `print-area-snapshot-${Date.now()}.png`, e.href = o, document.body.appendChild(e), e.click(), document.body.removeChild(e);
 		}
 		let c = new i(document.createElement("canvas"), {
-			width: m.width,
-			height: m.height,
+			width: h.width,
+			height: h.height,
 			backgroundColor: "rgba(0,0,0,0)"
 		}), l = e.getObjects();
 		await Promise.all(l.map(async (e) => {
 			let t = await e.clone();
 			c.add(t);
-		})), c.renderAll();
+		})), c.requestRenderAll();
 		let u = c.toDataURL({
 			format: "png",
 			multiplier: 1
 		});
 		c.dispose();
-		let p = await (await fetch(u)).blob(), g = new File([p], `thumb-${Date.now()}.png`, { type: "image/png" });
+		let m = await (await fetch(u)).blob(), _ = new File([m], `thumb-${Date.now()}.png`, { type: "image/png" });
 		if (s.onSaveThumb) {
-			await s.onSaveThumb(g);
+			await s.onSaveThumb(_);
 			return;
 		}
-		let _ = document.createElement("a");
-		_.download = `thumb-${Date.now()}.png`, _.href = u, document.body.appendChild(_), _.click(), document.body.removeChild(_);
+		let v = document.createElement("a");
+		v.download = `thumb-${Date.now()}.png`, v.href = u, document.body.appendChild(v), v.click(), document.body.removeChild(v);
 	}, [
 		s,
-		h,
-		m.height,
-		m.width
+		g,
+		h.height,
+		h.width
 	]);
 	return /* @__PURE__ */ (0, l.jsxs)("div", {
 		className: "app-container",
@@ -192,20 +223,20 @@ function u({ config: s }) {
 				/* @__PURE__ */ (0, l.jsx)("button", {
 					className: "export-btn",
 					type: "button",
-					onClick: b,
+					onClick: x,
 					children: "Upload"
 				}),
 				/* @__PURE__ */ (0, l.jsx)("input", {
-					ref: p,
+					ref: m,
 					type: "file",
 					accept: "image/*",
 					style: { display: "none" },
-					onChange: (e) => void y(e.target.files?.[0] ?? null)
+					onChange: (e) => void b(e.target.files?.[0] ?? null)
 				}),
 				/* @__PURE__ */ (0, l.jsx)("button", {
 					className: "export-btn",
 					type: "button",
-					onClick: () => void x(),
+					onClick: () => void S(),
 					children: "Save"
 				})
 			]
