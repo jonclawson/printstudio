@@ -11,6 +11,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
 
   const canvasRef: FabricCanvasRef = useRef<Canvas | null>(null);
   const bgImageRef = useRef<FabricImage | null>(null);
+  const bgColorRectRef = useRef<Rect | null>(null);
   const fileInputArtworkRef = useRef<HTMLInputElement | null>(null);
 
   const templateDims = useMemo(
@@ -58,7 +59,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     });
 
     canvas.setZoom(scaleMultiplier);
-    canvas.renderAll();
+    canvas.requestRenderAll();
   }, [templateDims.height, templateDims.width]);
 
   const drawPrintAreaGuidelines = useCallback(() => {
@@ -136,6 +137,52 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     };
   }, [drawPrintAreaGuidelines, resizeAndScaleStudio]);
 
+  /**
+   * Sync the background color Rect with config.background_color.
+   * Creates/updates/removes a full-canvas Rect at index 0 below the ghost image.
+   */
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const color = config.background_color;
+
+    if (color) {
+      if (bgColorRectRef.current && canvas.contains(bgColorRectRef.current)) {
+        bgColorRectRef.current.set({ fill: color });
+        canvas.requestRenderAll();
+        return;
+      }
+
+      const rect = new Rect({
+        left: 0,
+        top: 0,
+        width: templateDims.width,
+        height: templateDims.height,
+        fill: color,
+        selectable: false,
+        evented: false,
+        excludeFromExport: true,
+        absolutePositioned: true,
+        originX: 'left',
+        originY: 'top',
+      });
+
+      bgColorRectRef.current = rect;
+
+      canvas.insertAt(0, rect);
+
+      canvas.requestRenderAll();
+    } else {
+      if (bgColorRectRef.current) {
+        canvas.remove(bgColorRectRef.current);
+        bgColorRectRef.current.dispose();
+        bgColorRectRef.current = null;
+        canvas.requestRenderAll();
+      }
+    }
+  }, [config.background_color, templateDims.height, templateDims.width]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -143,9 +190,15 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     const cancelledRef = { cancelled: false };
 
     const loadBg = async () => {
-      const nextBg = await FabricImage.fromURL(config.image_url, {
-        crossOrigin: 'anonymous',
-      });
+      // 1. Fetch the image and get the raw blob data
+    const response = await fetch(config.image_url);
+    const imageBlob = await response.blob();
+
+    // 2. Create a local object URL from the blob
+    const blobUrl = URL.createObjectURL(imageBlob);
+
+    // 3. Pass the blob URL to Fabric.js (local URL, no CORS needed)
+      const nextBg = await FabricImage.fromURL(blobUrl);
 
       if (cancelledRef.cancelled) {
         nextBg.dispose();
@@ -174,8 +227,14 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
 
       bgImageRef.current = nextBg;
 
-      canvas.insertAt(0, nextBg);
-      canvas.renderAll();
+      // Check if the background color rectangle is currently active on the canvas
+      const hasBgColor = bgColorRectRef.current && canvas.contains(bgColorRectRef.current);
+      const targetIndex = hasBgColor ? 1 : 0;
+
+      // CORRECT SIGNATURE: index first, then object
+      canvas.insertAt(targetIndex, nextBg);
+
+      canvas.requestRenderAll();
     };
 
     void loadBg();
@@ -215,7 +274,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
 
       canvas.add(img);
       canvas.setActiveObject(img);
-      canvas.renderAll();
+      canvas.requestRenderAll();
     },
     [
       config.print_area_height,
@@ -237,7 +296,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     if (!canvas || !bgImageInstance) return;
 
     canvas.discardActiveObject();
-    canvas.renderAll();
+    canvas.requestRenderAll();
 
     // 1) Existing behavior: export print-area snapshot (artwork only, no bg)
     const offscreenEl = document.createElement('canvas');
@@ -251,7 +310,11 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
 
     const targetObjects = canvas
       .getObjects()
-      .filter((obj) => obj !== bgImageInstance) as FabricObject[];
+      .filter(
+        (obj) =>
+          obj !== bgImageInstance &&
+          obj !== bgColorRectRef.current,
+      ) as FabricObject[];
 
     await Promise.all(
       targetObjects.map(async (obj) => {
@@ -261,7 +324,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
       }),
     );
 
-    offscreenCanvas.renderAll();
+    offscreenCanvas.requestRenderAll();
 
     const dataURL = offscreenCanvas.toDataURL({
       format: 'png',
@@ -309,7 +372,7 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
       }),
     );
 
-    thumbOffscreenCanvas.renderAll();
+    thumbOffscreenCanvas.requestRenderAll();
 
     const thumbDataURL = thumbOffscreenCanvas.toDataURL({
       format: 'png',

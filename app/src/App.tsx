@@ -88,7 +88,7 @@ export default function App() {
       printfile_dpi: printfile.dpi,
 
       onSaveThumb: async (file: File) => {
-        // downloadFileInBrowser(file);
+        downloadFileInBrowser(file);
         console.log('Exported thumb:', {
           name: file.name,
           size: file.size,
@@ -98,6 +98,7 @@ export default function App() {
 
       onExportComplete: async (file: File) => {
         // demo behavior: log
+        downloadFileInBrowser(file);
         console.log('Exported file:', {
           name: file.name,
           size: file.size,
