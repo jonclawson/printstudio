@@ -13,6 +13,7 @@ export type TemplateConfig = {
     printfile_width: number;
     printfile_height: number;
     printfile_dpi: number;
+    fill_mode: 'cover' | 'fit';
     onExportComplete?: (file: File) => void | Promise<void>;
     /**
      * Save a "thumb" image of the full canvas (background + placed artwork),

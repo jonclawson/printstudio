@@ -166,51 +166,55 @@ function u({ config: s }) {
 		let e = d.current, t = f.current;
 		if (!e || !t) return;
 		e.discardActiveObject(), e.requestRenderAll();
-		let n = new i(document.createElement("canvas"), {
-			width: h.width,
-			height: h.height,
+		let n = h.width, r = h.height;
+		s.fill_mode === "cover" && (n = s.printfile_width, r = s.printfile_height);
+		let a = new i(document.createElement("canvas"), {
+			width: n,
+			height: r,
 			backgroundColor: "rgba(0,0,0,0)"
-		}), r = g(), a = e.getObjects().filter((e) => e !== t && e !== p.current);
-		await Promise.all(a.map(async (e) => {
+		}), o = g(), c = e.getObjects().filter((e) => e !== t && e !== p.current);
+		await Promise.all(c.map(async (e) => {
 			let t = await e.clone();
-			t.clipPath = r, n.add(t);
-		})), n.requestRenderAll();
-		let o = n.toDataURL({
+			t.clipPath = o, a.add(t);
+		})), a.requestRenderAll();
+		let l, u, m, _ = s.printfile_width / s.print_area_width, v = s.printfile_height / s.print_area_height;
+		s.fill_mode === "cover" ? (l = Math.max(_, v), u = v == l ? s.printfile_width / v : s.print_area_width, m = _ == l ? s.printfile_height / _ : s.print_area_height) : (l = Math.min(_, v), u = s.print_area_width, m = s.print_area_height);
+		let y = a.toDataURL({
 			format: "png",
 			left: s.print_area_left,
 			top: s.print_area_top,
-			width: s.print_area_width,
-			height: s.print_area_height,
-			multiplier: s.printfile_width / s.print_area_width
+			width: u,
+			height: m,
+			multiplier: l
 		});
-		if (n.dispose(), s.onExportComplete) {
-			let e = await (await fetch(o)).blob(), t = new File([e], `print-area-${Date.now()}.png`, { type: "image/png" });
+		if (a.dispose(), s.onExportComplete) {
+			let e = await (await fetch(y)).blob(), t = new File([e], `print-area-${Date.now()}.png`, { type: "image/png" });
 			await s.onExportComplete(t);
 		} else {
 			let e = document.createElement("a");
-			e.download = `print-area-snapshot-${Date.now()}.png`, e.href = o, document.body.appendChild(e), e.click(), document.body.removeChild(e);
+			e.download = `print-area-snapshot-${Date.now()}.png`, e.href = y, document.body.appendChild(e), e.click(), document.body.removeChild(e);
 		}
-		let c = new i(document.createElement("canvas"), {
+		let b = new i(document.createElement("canvas"), {
 			width: h.width,
 			height: h.height,
 			backgroundColor: "rgba(0,0,0,0)"
-		}), l = e.getObjects();
-		await Promise.all(l.map(async (e) => {
+		}), x = e.getObjects();
+		await Promise.all(x.map(async (e) => {
 			let t = await e.clone();
-			c.add(t);
-		})), c.requestRenderAll();
-		let u = c.toDataURL({
+			b.add(t);
+		})), b.requestRenderAll();
+		let S = b.toDataURL({
 			format: "png",
 			multiplier: 1
 		});
-		c.dispose();
-		let m = await (await fetch(u)).blob(), _ = new File([m], `thumb-${Date.now()}.png`, { type: "image/png" });
+		b.dispose();
+		let C = await (await fetch(S)).blob(), w = new File([C], `thumb-${Date.now()}.png`, { type: "image/png" });
 		if (s.onSaveThumb) {
-			await s.onSaveThumb(_);
+			await s.onSaveThumb(w);
 			return;
 		}
-		let v = document.createElement("a");
-		v.download = `thumb-${Date.now()}.png`, v.href = u, document.body.appendChild(v), v.click(), document.body.removeChild(v);
+		let T = document.createElement("a");
+		T.download = `thumb-${Date.now()}.png`, T.href = S, document.body.appendChild(T), T.click(), document.body.removeChild(T);
 	}, [
 		s,
 		g,

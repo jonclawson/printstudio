@@ -322,10 +322,19 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
     canvas.requestRenderAll();
 
     // 1) Existing behavior: export print-area snapshot (artwork only, no bg)
+
+    let canvasWidth = templateDims.width;
+    let canvasHeight = templateDims.height;
+
+    if (config.fill_mode === 'cover') {
+      canvasWidth = config.printfile_width;
+      canvasHeight = config.printfile_height;
+    }
+
     const offscreenEl = document.createElement('canvas');
     const offscreenCanvas = new Canvas(offscreenEl, {
-      width: templateDims.width,
-      height: templateDims.height,
+      width: canvasWidth,
+      height: canvasHeight,
       backgroundColor: 'rgba(0,0,0,0)',
     });
 
@@ -349,14 +358,39 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
 
     offscreenCanvas.requestRenderAll();
 
+    // Inside handleExportClick, replace the dataURL generation with:
+
+    // Calculate multiplier based on fill_mode fix 1
+    let multiplier: number;
+    let exportWidth: number;
+    let exportHeight: number;
+
+    const multiplierWidth = config.printfile_width / config.print_area_width;
+    const multiplierHeight = config.printfile_height / config.print_area_height;
+    if (config.fill_mode === 'cover') {
+      // For cover mode: use the larger multiplier to ensure full coverage
+      multiplier = Math.max(multiplierWidth, multiplierHeight);
+      
+      // Export at exact printfile proportions
+      exportWidth = multiplierHeight == multiplier ?(config.printfile_width / multiplierHeight) : config.print_area_width;
+      exportHeight = multiplierWidth == multiplier ? (config.printfile_height / multiplierWidth) : config.print_area_height;
+    } else {
+      // Original behavior for other modes
+      // multiplier = config.printfile_width / config.print_area_width;
+      multiplier = Math.min(multiplierWidth, multiplierHeight);
+      exportWidth = config.print_area_width;
+      exportHeight = config.print_area_height;
+    }
+
     const dataURL = offscreenCanvas.toDataURL({
       format: 'png',
       left: config.print_area_left,
       top: config.print_area_top,
-      width: config.print_area_width,
-      height: config.print_area_height,
-      multiplier: config.printfile_width / config.print_area_width,
+      width: exportWidth,
+      height: exportHeight,
+      multiplier: multiplier,
     });
+
 
     offscreenCanvas.dispose();
 
