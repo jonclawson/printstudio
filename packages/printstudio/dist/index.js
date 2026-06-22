@@ -178,7 +178,7 @@ function u({ config: s }) {
 			t.clipPath = o, a.add(t);
 		})), a.requestRenderAll();
 		let l, u, m, _ = s.printfile_width / s.print_area_width, v = s.printfile_height / s.print_area_height;
-		s.fill_mode === "cover" ? (l = Math.max(_, v), u = v == l ? s.printfile_width / v : s.print_area_width, m = _ == l ? s.printfile_height / _ : s.print_area_height) : (l = Math.min(_, v), u = s.print_area_width, m = s.print_area_height);
+		s.fill_mode === "cover" ? (l = Math.max(_, v), u = v == l ? s.printfile_width / v : s.print_area_width, m = _ == l ? s.printfile_height / _ : s.print_area_height) : (l = s.printfile_width / s.print_area_width, u = s.print_area_width, m = s.print_area_height);
 		let y = a.toDataURL({
 			format: "png",
 			left: s.print_area_left,

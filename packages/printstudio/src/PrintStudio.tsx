@@ -376,10 +376,13 @@ export default function PrintStudio({ config }: { config: TemplateConfig }) {
       exportHeight = multiplierWidth == multiplier ? (config.printfile_height / multiplierWidth) : config.print_area_height;
     } else {
       // Original behavior for other modes
-      // multiplier = config.printfile_width / config.print_area_width;
-      multiplier = Math.min(multiplierWidth, multiplierHeight);
+      multiplier = config.printfile_width / config.print_area_width;
       exportWidth = config.print_area_width;
       exportHeight = config.print_area_height;
+      
+      // multiplier = Math.min(multiplierWidth, multiplierHeight);
+      // exportWidth = multiplierHeight == multiplier ?(config.printfile_width / multiplierHeight) : config.print_area_width;
+      // exportHeight = multiplierWidth == multiplier ? (config.printfile_height / multiplierWidth) : config.print_area_height;
     }
 
     const dataURL = offscreenCanvas.toDataURL({
